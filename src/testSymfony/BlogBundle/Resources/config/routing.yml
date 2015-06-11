@@ -1,0 +1,19 @@
+# blog_homepage:
+#     pattern:  /hello/{name}
+#     defaults: { _controller: BlogBundle:Default:index }
+
+Blog_home:
+    pattern: /
+    defaults: { _controller: BlogBundle:Public:index }
+
+Blog_page:
+    pattern: /page/{page}
+    defaults: { _controller: BlogBundle:Public:page }
+    requirements: 
+      page: \d+
+
+Blog_article: 
+    pattern: /article/{slug}.{_format} # slug = Identifier les articles
+    defaults: { _controller: BlogBundle:Public:article, _format: html }
+    requirements: 
+      _locale: fr|en

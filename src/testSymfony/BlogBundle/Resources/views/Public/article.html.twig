@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<meta charset="UTF-8" />
+		<title>Welcome on our Blog</title>
+
+	</head>
+
+	<body>
+		
+		<header>
+
+		</header>
+		<h1>{{ article.titre }}</h1>
+
+		<p>Titre de l'article : {{ article.titre }} </p><br>
+	
+		<p>Contenu : {{ article.contenu }}</p><br>
+
+		<p>Ecrit par : {{ article.auteur }}</p><br>
+
+		<p>Publié le {{ article.date | date('Y-m-d') }}</p>
+		
+		<p>Token : {{ article.token }}</p>
+
+	</body>
+
+</html>
